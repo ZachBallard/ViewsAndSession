@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+@foreach (var s in Model.OrderBy(x => x.Id))
+{
+    @Html.DisplayFor(m => s)
+}
+
+@Html.ActionLink("Add Student", "Create")

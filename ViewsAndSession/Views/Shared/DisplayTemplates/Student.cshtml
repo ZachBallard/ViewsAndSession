@@ -1,0 +1,17 @@
+﻿@model ViewsAndSession.Student
+<br />
+<div style="padding: 5px; border: solid blue 1px">
+    
+    <h2>Student: @Model.FirstName @Model.LastName</h2>
+    <hr />
+    @if (Model.Age > 30)
+    {
+        <h2>Age: <span style="color: red">@Model.Age</span></h2>
+    }
+    else
+    {
+        <h2>Age: <span style="color: black">@Model.Age</span></h2>
+    }
+    <h2>Gender: @Model.Gender</h2>
+    @Html.ActionLink("Edit", $"Edit/{Model.Id}")
+</div>
